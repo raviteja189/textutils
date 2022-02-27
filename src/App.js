@@ -51,13 +51,15 @@ function App() {
   
           <div className="container">
             <Switch>
-               <Route path="/data" >
-                 {/* <About mode={mode}/> */}
-                 <Data/>
+              
+            <Route path="/about" >
+                 <About mode={mode}/> 
+                 
                </Route>
                <Route path="/" > 
                  <Textform heading="Try TextUtils-word counter,character counter" mode={mode} showAlert={showAlert}/> 
                </Route>
+               
             </Switch>
           
           </div>
