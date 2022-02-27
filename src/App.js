@@ -1,13 +1,14 @@
 import React,{ useState } from "react";
-// import About from "./components/About";
+import About from "./components/About";
 import Alert from "./components/Alert";
 import Navbar from "./components/Navbar";
 import Textform from "./components/Textform";
-// import {
-//   BrowserRouter as Router,
-//   Switch,
-//   Route,
-// } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import Data from "./components/Data";
 
 function App() {
 
@@ -43,24 +44,24 @@ function App() {
   }
   return (
     <>
-          {/* <Router> */}
+          <Router>
       <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       
   
           <div className="container">
-            {/* <Switch>
-               <Route path="/about" >
-                 <About mode={mode}/>
-                 
+            <Switch>
+               <Route path="/data" >
+                 {/* <About mode={mode}/> */}
+                 <Data/>
                </Route>
-               <Route path="/" > */}
+               <Route path="/" > 
                  <Textform heading="Try TextUtils-word counter,character counter" mode={mode} showAlert={showAlert}/> 
-               {/* </Route>
+               </Route>
             </Switch>
-           */}
+          
           </div>
-          {/* </Router> */}
+         </Router>
     </>
   );
 }
